@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transaction.form.IncomeExpenseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/empty_tall_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cash2"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_background"
+                    android:checked="true"
+                    android:text="@string/cash"
+                    android:textSize="@dimen/cash_bank_radio_text_Size"
+                    tools:layout_conversion_absoluteHeight="33dp"
+                    tools:layout_conversion_absoluteWidth="70dp"
+                    tools:layout_editor_absoluteX="150dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <RadioButton
+                    android:id="@+id/bank2"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_background"
+                    android:text="@string/bank"
+                    android:textSize="@dimen/cash_bank_radio_text_Size"
+                    tools:layout_conversion_absoluteHeight="33dp"
+                    tools:layout_conversion_absoluteWidth="70dp"
+                    tools:layout_editor_absoluteX="220dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/group_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3.0dip"
+                android:gravity="center"
+                android:text="TextView"
+                android:textSize="16.0sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/date_e"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_weight="5.0"
+                        android:cursorVisible="false"
+                        android:focusable="false">
+
+                        <EditText
+                            android:id="@+id/idate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/form_editText_height"
+                            android:focusable="false"
+                            android:hint="@string/enter_date"
+                            android:clickable="true"
+                            android:inputType="date"
+                            android:textSize="@dimen/form_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/party_e"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_weight="5.0">
+
+                        <EditText
+                            android:id="@+id/iparty"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/form_editText_height"
+                            android:layout_marginTop="@dimen/form_editText_margin_top"
+                            android:focusable="false"
+                            android:hint="@string/enter_party"
+                            android:clickable="true"
+                            android:textCursorDrawable="@drawable/nocursor"
+                            android:textSize="@dimen/form_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/title_e"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/ititle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/form_editText_height"
+                        android:layout_marginTop="@dimen/form_editText_margin_top"
+                        android:hint="@string/enter_title"
+                        android:singleLine="true"
+                        android:textSize="@dimen/form_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amount_e"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/iamount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/form_editText_height"
+                        android:layout_marginTop="@dimen/form_editText_margin_top"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="@dimen/form_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/bank_e"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/ibank_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/form_editText_height"
+                        android:layout_marginTop="@dimen/form_editText_margin_top"
+                        android:focusable="false"
+                        android:hint="@string/enter_bank_name"
+                        android:textCursorDrawable="@drawable/nocursor"
+                        android:textSize="@dimen/form_text_size"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/category_e"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/icate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/form_editText_height"
+                        android:layout_marginTop="@dimen/form_editText_margin_top"
+                        android:focusable="false"
+                        android:hint="@string/enter_category"
+                        android:textCursorDrawable="@drawable/nocursor"
+                        android:textSize="@dimen/form_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="130.0dip"
+                        android:layout_marginLeft="12.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_toRightOf="@+id/card_cam"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/lyout_camera"
+                            android:layout_width="130.0dip"
+                            android:layout_height="30.0dip"
+                            android:background="@drawable/btn_camgal"
+                            android:paddingTop="3.0dip"
+                            android:paddingBottom="3.0dip">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8.0dip"
+                                android:text="Camera" />
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="35.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@android:drawable/ic_menu_camera" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lyout_gallery"
+                            android:layout_width="130.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_below="@+id/lyout_camera"
+                            android:layout_marginTop="12.0dip"
+                            android:background="@drawable/btn_camgal"
+                            android:paddingTop="3.0dip"
+                            android:paddingBottom="3.0dip">
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="35.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8.0dip"
+                                android:text="Gallery" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/card_cam"
+                        android:layout_width="150.0dip"
+                        android:layout_height="130.0dip"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_marginBottom="8.0dip"
+                        android:background="@drawable/btn_camgal"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/lyout_cap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/img_camera"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8.0dip"
+                                android:text="Capture Bill" />
+
+                            <ImageView
+                                android:id="@+id/img_camera"
+                                android:layout_width="60.0dip"
+                                android:layout_height="60.0dip"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                app:srcCompat="@android:drawable/ic_menu_camera" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lyout_bill"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/img_bill"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5.0dip"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/img_close"
+                                android:layout_width="25.0dip"
+                                android:layout_height="25.0dip"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5.0dip"
+                                android:layout_marginRight="5.0dip" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/isave"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/form_editText_height"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textSize="@dimen/form_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/appcolor_main</item>
+        <item name="colorPrimaryDark">@color/appcolor_sub</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="radioButtonStyle">@style/Widget.AppCompat.CompoundButton.RadioButton</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="Base.Widget.AppCompat.CompoundButton.RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">?controlBackground</item>
+        <item name="android:button">?android:listChoiceIndicatorSingle</item>
+    </style>-->
+    <style name="RadioButton">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:minWidth">70.0dip</item>
+        <item name="android:minHeight">33.0dip</item>
+    </style>
+
+    <!--<style name="Widget.AppCompat.CompoundButton.RadioButton" parent="@style/Base.Widget.AppCompat.CompoundButton.RadioButton" />-->
+
+</resources>
