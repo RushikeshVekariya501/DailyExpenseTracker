@@ -30,6 +30,7 @@ public class SummaryActivity extends AppCompatActivity {
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.summary_view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
+
         TabLayout tabs = findViewById(R.id.summary_tabs);
         tabs.setupWithViewPager(viewPager);
         ImageView imgBack = (ImageView) findViewById(R.id.summary_imgBack);

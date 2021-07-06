@@ -87,8 +87,7 @@ public class PartyActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 // inflate the layout of the popup window
-                inflater = (LayoutInflater)
-                        getSystemService(LAYOUT_INFLATER_SERVICE);
+                inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
                 popupView = inflater.inflate(R.layout.party_add_form, null);
 
                 // create the popup window
@@ -123,23 +122,22 @@ public class PartyActivity extends AppCompatActivity {
             }
         });
     }
+    //inflater = (LayoutInflater) collection.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
 
     private void setListView() {
-        /*SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ListView listView = findViewById(R.id.party_view_pager);
-        listView.setAdapter(sectionsPagerAdapter);*/
-
-
-
         List<PartyModel> parties = mDatabaseHelper.getPartyList();
         String[] partyNames = new String[parties.size()];
         for(int i=0; i<parties.size(); i++){
             partyNames[i] = parties.get(i).getName();
         }
 
+
         ListView list = (ListView)findViewById(R.id.view_party_list);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.parties_list_view, R.id.view_party_list_label, partyNames);
         list.setAdapter(arrayAdapter);
+
+
 
         /*ListView list = (ListView) findViewById(R.id.view_party_list);
 
